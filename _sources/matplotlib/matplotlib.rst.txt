@@ -1,0 +1,15 @@
+Matplotlib
+==============
+
+matplotlibでよく使う設定のまとめ。
+
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :glob:
+
+   contents/setup.md
+   contents/plot.md
+   contents/string.md
+   contents/axis.md
+   contents/legend.md

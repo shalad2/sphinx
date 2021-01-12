@@ -1,0 +1,532 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.4. 軸の設定 &mdash; pages  ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/my_theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="1.5. 凡例の設定" href="legend.html" />
+    <link rel="prev" title="1.3. 文字列の設定" href="string.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> pages
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Python</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.html">1. Matplotlib</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="setup.html">1.1. はじめに</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot.html">1.2. プロットする</a></li>
+<li class="toctree-l2"><a class="reference internal" href="string.html">1.3. 文字列の設定</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.4. 軸の設定</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">1.4.1. 軸ラベル</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">1.4.1.1. 軸ラベルの設定</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">1.4.1.2. 軸ラベルの位置揃え</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">1.4.2. 軸の範囲</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id6">1.4.2.1. 最小値・最大値</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">1.4.2.2. 余白</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">1.4.3. 目盛と目盛ラベル</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id9">1.4.3.1. 目盛の間隔</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">1.4.3.2. 詳細設定</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id11">1.4.3.3. 目盛ラベルの上書き</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">1.4.4. 補助線</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="legend.html">1.5. 凡例の設定</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Link</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../link/link.html">1. リンク集</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">pages</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.html"><span class="section-number">1. </span>Matplotlib</a> &raquo;</li>
+        
+      <li><span class="section-number">1.4. </span>軸の設定</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/matplotlib/contents/axis.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1><span class="section-number">1.4. </span>軸の設定<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id2">
+<h2><span class="section-number">1.4.1. </span>軸ラベル<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id3">
+<h3><span class="section-number">1.4.1.1. </span>軸ラベルの設定<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>グラフの軸ラベルは<strong>Axes.set_xlabel()</strong> または <strong>Axes.set_ylabel()</strong> で設定する。この時<a class="reference internal" href="string.html"><span class="doc">文字列の設定</span></a>のパラメータを用いて文字のスタイルを指定可能。</p>
+<p>縦軸と横軸のラベル名を同時に設定する場合は <strong>Axes.set(xlabel='横軸ラベル名', ylabel='縦軸ラベル名')</strong> または <strong>Axes.update(dict(xlabel='横軸ラベル名', ylabel='縦軸ラベル名'))</strong> と一行で書ける。</p>
+<p>なお、Axes作成時に<strong>xlabel</strong>と<strong>ylabel</strong>を指定する方法もある。</p>
+<p>軸ラベルの設定例(3パターン)</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+
+<span class="n">ax1</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">131</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x1&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;y1&#39;</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">132</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;x2&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;y2&#39;</span><span class="p">)</span>
+
+<span class="n">ax3</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">133</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;x3&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;y3&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="axis1" src="../../_images/axis1.png" /></p>
+<p><strong>labelpad</strong></p>
+<p>軸とラベルの間隔。デフォルトは<code class="docutils literal notranslate"><span class="pre">None</span></code>。</p>
+<p><strong>loc</strong></p>
+<p>軸ラベルの位置。デフォルトは<code class="docutils literal notranslate"><span class="pre">center</span></code>。</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="left">loc</th>
+<th align="left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">left</td>
+<td align="left">左寄せ</td>
+</tr>
+<tr>
+<td align="left">center</td>
+<td align="left">中央寄せ</td>
+</tr>
+<tr>
+<td align="left">right</td>
+<td align="left">右寄せ</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section" id="id4">
+<h3><span class="section-number">1.4.1.2. </span>軸ラベルの位置揃え<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>複数のグラフの軸ラベルの位置を揃えるには <strong>fig.align_labels()</strong> を用いる。</p>
+<p>軸ラベルを揃える例</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">align_labels</span><span class="p">()</span>
+
+<span class="c1"># 横軸ラベル・縦軸ラベルだけに設定</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">align_xlabels</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">align_ylabels</span><span class="p">()</span>
+
+<span class="c1"># 特定のグラフにのみ設定</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">align_labels</span><span class="p">([</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">])</span>
+</pre></div>
+</div>
+<p><img alt="axis_add1" src="../../_images/axis_add1.png" /></p>
+</div>
+</div>
+<div class="section" id="id5">
+<h2><span class="section-number">1.4.2. </span>軸の範囲<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id6">
+<h3><span class="section-number">1.4.2.1. </span>最小値・最大値<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>軸の範囲(最小値・最大値)は <strong>Axes.set_xlim()</strong> または <strong>Axes.set_ylim()</strong> で設定する。引数には軸の最小値・最大値を渡す。</p>
+<p>縦軸と横軸の最小値・最大値を同時に設定する場合は <strong>Axes.set(xlim=(left, right), ylim=(bottom, top))</strong> と一行で書ける。</p>
+<p>軸ラベルと同様に、Axes作成時に<strong>xlim</strong>と<strong>ylim</strong>で指定することもできる。</p>
+<p>軸範囲の設定例(3パターン)</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax1</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="n">ax2</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
+
+<span class="c1">#Axes作成時に設定</span>
+<span class="n">ax3</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">133</span><span class="p">,</span> <span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+<p><img alt="axis2" src="../../_images/axis2.png" /></p>
+</div>
+<div class="section" id="id7">
+<h3><span class="section-number">1.4.2.2. </span>余白<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>最小値・最大値の設定をしていない、または<strong>Axes.set_xlim(auto=True)</strong>、 <strong>Axes.set_ylim(auto=True)</strong> としている場合は、データの最小値・最大値から自動で軸の最小値・最大値が設定される。この時に軸の余白として<strong>xmargin</strong>と<strong>ymargin</strong>が利用される。</p>
+<p>余白は<code class="docutils literal notranslate"><span class="pre">(データの最大値</span> <span class="pre">-</span> <span class="pre">データの最小値)</span> <span class="pre">*</span> <span class="pre">marginの値</span></code>で与えられる。Axes作成時に<strong>xmargin</strong>と<strong>ymargin</strong>を指定するか、 <strong>plt.margins()</strong> で指定する(デフォルトは<code class="docutils literal notranslate"><span class="pre">0.05</span></code>)。</p>
+<p>余白の設定例</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># デフォルト(margin=0.05)</span>
+<span class="n">ax1</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">131</span><span class="p">)</span>
+
+<span class="c1"># margin=0</span>
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">132</span><span class="p">,</span> <span class="n">xmargin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ymargin</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># plt.marginsで指定(それぞれのグラフに対して適用される)</span>
+<span class="n">ax3</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">133</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">margins</span><span class="p">(</span><span class="mf">0.08</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">margins</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">)</span>    <span class="c1"># (xmargin, ymargin)</span>
+</pre></div>
+</div>
+<p><img alt="axis3" src="../../_images/axis3.png" /></p>
+</div>
+</div>
+<div class="section" id="id8">
+<h2><span class="section-number">1.4.3. </span>目盛と目盛ラベル<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>軸の目盛には主目盛と補助目盛があり、主目盛には目盛ラベルがついている。</p>
+<div class="section" id="id9">
+<h3><span class="section-number">1.4.3.1. </span>目盛の間隔<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>軸の目盛は <strong>Axis.set_major_locator()</strong> (主目盛)または <strong>Axis.set_minor_locator()</strong> (補助目盛)に<strong>Locator</strong>を渡すことで変更できる。デフォルトでは主目盛は<code class="docutils literal notranslate"><span class="pre">AutoLocator</span></code>、補助目盛は<code class="docutils literal notranslate"><span class="pre">NullLocator</span></code>になっている。</p>
+<p>目盛の間隔を変更するには <strong>matplotlib.ticker.MultipleLocater()</strong> を作成し、<strong>Locator</strong>に渡す。</p>
+<p>また、後述する**Axes.set_xticks()<strong>と</strong>Axes.set_yticks()**を用いると直接的な目盛ラベルの指定が可能であり、この方法でも主目盛の間隔を変更できる。</p>
+<p>目盛間隔の設定例</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># モジュールのインポート</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
+
+<span class="c1"># 主目盛及び補助目盛の間隔を変更</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">mpl</span><span class="o">.</span><span class="n">ticker</span><span class="o">.</span><span class="n">MultipleLocator</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="n">ax2</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_minor_locator</span><span class="p">(</span><span class="n">mpl</span><span class="o">.</span><span class="n">ticker</span><span class="o">.</span><span class="n">MultipleLocator</span><span class="p">(</span><span class="mf">0.5</span><span class="p">))</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">mpl</span><span class="o">.</span><span class="n">ticker</span><span class="o">.</span><span class="n">MultipleLocator</span><span class="p">(</span><span class="mf">0.5</span><span class="p">))</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_minor_locator</span><span class="p">(</span><span class="n">mpl</span><span class="o">.</span><span class="n">ticker</span><span class="o">.</span><span class="n">MultipleLocator</span><span class="p">(</span><span class="mf">0.25</span><span class="p">))</span>
+</pre></div>
+</div>
+<p><img alt="axis4" src="../../_images/axis4.png" /></p>
+<p><strong>Locator</strong></p>
+<p><strong>mpl.ticker.XXXLocator</strong>で作成できる<strong>Locator</strong>の例。</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="left">XXXLocator</th>
+<th align="left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">NullLocator</td>
+<td align="left">目盛なし(ラベルもなし)</td>
+</tr>
+<tr>
+<td align="left">AutoLocator</td>
+<td align="left">自動で目盛を設定</td>
+</tr>
+<tr>
+<td align="left">MultipleLocator</td>
+<td align="left">特定の値の整数倍に目盛を設定</td>
+</tr>
+<tr>
+<td align="left">IndexLocator</td>
+<td align="left">等差数列の目盛を設定</td>
+</tr>
+<tr>
+<td align="left">LinearLocator</td>
+<td align="left">特定の個数だけ目盛を配置</td>
+</tr>
+</tbody>
+</table><div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
+
+<span class="c1"># NullLocator()</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">mpl</span><span class="o">.</span><span class="n">ticker</span><span class="o">.</span><span class="n">NullLocator</span><span class="p">())</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">mpl</span><span class="o">.</span><span class="n">ticker</span><span class="o">.</span><span class="n">NullLocator</span><span class="p">())</span>
+
+<span class="c1"># ただしNullLocatorについては次のように指定する方が簡単</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([])</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([])</span>
+
+<span class="c1"># AutoLocator()</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">mpl</span><span class="o">.</span><span class="n">ticker</span><span class="o">.</span><span class="n">AutoLocator</span><span class="p">())</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">mpl</span><span class="o">.</span><span class="n">ticker</span><span class="o">.</span><span class="n">AutoLocator</span><span class="p">())</span>
+
+<span class="c1"># IndexLocator(base, offset)</span>
+<span class="c1"># base * n + offset の位置に目盛を設定</span>
+<span class="n">ax3</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">mpl</span><span class="o">.</span><span class="n">ticker</span><span class="o">.</span><span class="n">IndexLocator</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">ax3</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">mpl</span><span class="o">.</span><span class="n">ticker</span><span class="o">.</span><span class="n">IndexLocator</span><span class="p">(</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">))</span>
+
+<span class="c1"># LinearLocator(numticks)</span>
+<span class="c1"># グラフ最小値・最大値の間を numticks - 1 等分する位置に目盛を設定</span>
+<span class="n">ax4</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">mpl</span><span class="o">.</span><span class="n">ticker</span><span class="o">.</span><span class="n">LinearLocator</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">ax4</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">mpl</span><span class="o">.</span><span class="n">ticker</span><span class="o">.</span><span class="n">LinearLocator</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+<p><img alt="axis5" src="../../_images/axis5.png" /></p>
+</div>
+<div class="section" id="id10">
+<h3><span class="section-number">1.4.3.2. </span>詳細設定<a class="headerlink" href="#id10" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>目盛と目盛ラベルの詳細設定は <strong>Axes.tick_params()</strong> を指定して行う。</p>
+<p>目盛の詳細設定例</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax1</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">direction</span><span class="o">=</span><span class="s1">&#39;inout&#39;</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+
+<span class="n">ax2</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">top</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">labelbottom</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">labeltop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">left</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">labelleft</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="axis6" src="../../_images/axis6.png" /></p>
+<p><strong>axis</strong></p>
+<p>目盛を設定する軸。デフォルトは<code class="docutils literal notranslate"><span class="pre">both</span></code>。</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="left">axis</th>
+<th align="left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">x</td>
+<td align="left">x軸</td>
+</tr>
+<tr>
+<td align="left">y</td>
+<td align="left">y軸</td>
+</tr>
+<tr>
+<td align="left">both</td>
+<td align="left">両軸</td>
+</tr>
+</tbody>
+</table><p><strong>which</strong></p>
+<p>主目盛と補助目盛の選択。デフォルトは<code class="docutils literal notranslate"><span class="pre">major</span></code>。</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="left">which</th>
+<th align="left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">major</td>
+<td align="left">主目盛</td>
+</tr>
+<tr>
+<td align="left">minor</td>
+<td align="left">補助目盛</td>
+</tr>
+<tr>
+<td align="left">both</td>
+<td align="left">両目盛</td>
+</tr>
+</tbody>
+</table><p><strong>direction</strong></p>
+<p>目盛の方向。デフォルトは<code class="docutils literal notranslate"><span class="pre">out</span></code>。</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="left">direction</th>
+<th align="left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">in</td>
+<td align="left">内側</td>
+</tr>
+<tr>
+<td align="left">out</td>
+<td align="left">外側</td>
+</tr>
+<tr>
+<td align="left">inout</td>
+<td align="left">両側</td>
+</tr>
+</tbody>
+</table><p><strong>length</strong></p>
+<p>目盛の長さ。</p>
+<p><strong>width</strong></p>
+<p>目盛の幅。</p>
+<p><strong>color</strong></p>
+<p>目盛の色。</p>
+<p><strong>pad</strong></p>
+<p>目盛と目盛ラベルの距離。</p>
+<p><strong>labelsize</strong></p>
+<p>目盛ラベルのサイズ。</p>
+<p><strong>labelcolor</strong></p>
+<p>目盛ラベルの色。</p>
+<p><strong>colors</strong></p>
+<p>目盛と目盛ラベルの色(同時に変更)。</p>
+<p><strong>bottom</strong> 、 <strong>top</strong> 、 <strong>left</strong> 、 <strong>right</strong></p>
+<p>目盛の表示。bool型で指定。</p>
+<p><strong>labelbottom</strong> 、 <strong>labeltop</strong> 、 <strong>labelleft</strong> 、 <strong>labelright</strong></p>
+<p>目盛ラベルの表示。bool型で指定。</p>
+</div>
+<div class="section" id="id11">
+<h3><span class="section-number">1.4.3.3. </span>目盛ラベルの上書き<a class="headerlink" href="#id11" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>目盛ラベルの間隔を <strong>Axes.set_xticks()</strong> または <strong>Axes.set_yticks()</strong> を用いて設定すると、直接的な目盛ラベルの指定ができる。引数には設定したい目盛ラベルのリストを渡す。</p>
+<p>さらに、指定した目盛ラベルのリストに対して <strong>Axes.set_xticklabels()</strong> または <strong>Axes.set_yticklabels()</strong> を適用すると、指定した引数のリストを用いて目盛ラベルの上書きをすることができる。</p>
+<p>目盛ラベルの上書き例</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id12">
+<h2><span class="section-number">1.4.4. </span>補助線<a class="headerlink" href="#id12" title="このヘッドラインへのパーマリンク">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="legend.html" class="btn btn-neutral float-right" title="1.5. 凡例の設定" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="string.html" class="btn btn-neutral float-left" title="1.3. 文字列の設定" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, shalad2
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

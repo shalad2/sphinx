@@ -1,0 +1,403 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.2. プロットする &mdash; pages  ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/my_theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="1.3. 文字列の設定" href="string.html" />
+    <link rel="prev" title="1.1. はじめに" href="setup.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> pages
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Python</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.html">1. Matplotlib</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="setup.html">1.1. はじめに</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.2. プロットする</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">1.2.1. 折れ線グラフ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">1.2.2. 散布図</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">1.2.3. 棒グラフ</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="string.html">1.3. 文字列の設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="axis.html">1.4. 軸の設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="legend.html">1.5. 凡例の設定</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Link</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../link/link.html">1. リンク集</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">pages</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.html"><span class="section-number">1. </span>Matplotlib</a> &raquo;</li>
+        
+      <li><span class="section-number">1.2. </span>プロットする</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/matplotlib/contents/plot.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1><span class="section-number">1.2. </span>プロットする<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id2">
+<h2><span class="section-number">1.2.1. </span>折れ線グラフ<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>折れ線グラフは <strong>Axes.plot()</strong> でプロットする。</p>
+<p>Axes.plot()の例</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;line_1&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="s1">&#39;12&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;line_2&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y3</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;go-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;line_3&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="plot1" src="matplotlib/contents/images/plot1.png" /></p>
+<p>第一引数x(横軸の値)は省略可能。省略すると[0, 1, 2, ..., N-1]  (<code class="docutils literal notranslate"><span class="pre">x=range(len(y))</span></code>)として扱われる。
+第三引数<strong>fmt</strong>は、[<strong>color</strong>]  [<strong>marker</strong>]  [<strong>linestyle</strong>]をまとめて記述できる。</p>
+<p><strong>label</strong></p>
+<p>プロットのラベル。凡例に表示される。</p>
+<p><strong>color</strong></p>
+<p>折れ線の色。<strong>c</strong>でも可。</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="left">color</th>
+<th align="left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">'b'</td>
+<td align="left">blue</td>
+</tr>
+<tr>
+<td align="left">'g'</td>
+<td align="left">green</td>
+</tr>
+<tr>
+<td align="left">'r'</td>
+<td align="left">red</td>
+</tr>
+<tr>
+<td align="left">'c'</td>
+<td align="left">cyan</td>
+</tr>
+<tr>
+<td align="left">'m'</td>
+<td align="left">magenta</td>
+</tr>
+<tr>
+<td align="left">'y'</td>
+<td align="left">yellow</td>
+</tr>
+<tr>
+<td align="left">'k'</td>
+<td align="left">black</td>
+</tr>
+<tr>
+<td align="left">'w'</td>
+<td align="left">white</td>
+</tr>
+</tbody>
+</table><p><strong>dashes</strong></p>
+<p>折れ線の実線部分と空白部分の長さをリストで指定。</p>
+<p><strong>linestyle</strong></p>
+<p>折れ線の線種。<strong>ls</strong>でも可。<strong>dashes</strong>が指定されていると無効。</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="left">linestyle</th>
+<th align="left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">'-'</td>
+<td align="left">solid line style</td>
+</tr>
+<tr>
+<td align="left">'--'</td>
+<td align="left">dashed line style</td>
+</tr>
+<tr>
+<td align="left">'-.'</td>
+<td align="left">dash-dot line style</td>
+</tr>
+<tr>
+<td align="left">':'</td>
+<td align="left">dotted line style</td>
+</tr>
+</tbody>
+</table><p><strong>linewidth</strong></p>
+<p>折れ線の太さ。<strong>lw</strong>でも可。</p>
+<p><strong>alpha</strong></p>
+<p>透明度を0〜1で指定。</p>
+<p><strong>zorder</strong></p>
+<p>オブジェクトが重なっていた時、この値が大きい方が前面に描画される。</p>
+<p><strong>marker</strong></p>
+<p>マーカーの形状。<code class="docutils literal notranslate"><span class="pre">None</span></code>でマーカーなし。</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="left">marker</th>
+<th align="left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">'.'</td>
+<td align="left">point marker</td>
+</tr>
+<tr>
+<td align="left">'o'</td>
+<td align="left">circle marker</td>
+</tr>
+<tr>
+<td align="left">'v'</td>
+<td align="left">triangle_down marker</td>
+</tr>
+<tr>
+<td align="left">'^'</td>
+<td align="left">triangle_up marker</td>
+</tr>
+<tr>
+<td align="left">'&lt;'</td>
+<td align="left">triangle_left marker</td>
+</tr>
+<tr>
+<td align="left">'&gt;'</td>
+<td align="left">triangle_right marker</td>
+</tr>
+<tr>
+<td align="left">'s'</td>
+<td align="left">square marker</td>
+</tr>
+<tr>
+<td align="left">'*'</td>
+<td align="left">star marker</td>
+</tr>
+</tbody>
+</table><p><strong>markersize</strong></p>
+<p>マーカーのサイズ。<strong>ms</strong>でも可。</p>
+<p><strong>markerfacecolor</strong></p>
+<p>マーカーの色。<strong>mfc</strong>でも可。</p>
+<p><strong>markeredgewidth</strong></p>
+<p>マーカーの縁の太さ。<strong>mew</strong>でも可。</p>
+<p><strong>markeredgecolor</strong></p>
+<p>マーカーの縁の色。<strong>mec</strong>でも可。</p>
+</div>
+<div class="section" id="id3">
+<h2><span class="section-number">1.2.2. </span>散布図<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>散布図は <strong>Axes.scatter()</strong> でプロットする。</p>
+<p>Axes.scatter()の例</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>マーカーに関するパラメータは、データ数と同じ要素数のリストを渡すと各点ごとに設定できる。</p>
+<p>次の引数はAxes.plot()のものと同じ。</p>
+<ul class="simple">
+<li><p><strong>marker</strong></p></li>
+<li><p><strong>label</strong></p></li>
+<li><p><strong>alpha</strong></p></li>
+<li><p><strong>zorder</strong></p></li>
+</ul>
+<p><strong>s</strong></p>
+<p>マーカーのサイズ。</p>
+<p><strong>c</strong></p>
+<p>マーカーの色。<strong>facecolor</strong>、<strong>facecolors</strong>でも可。</p>
+<p><strong>linewidths</strong></p>
+<p>マーカーの縁の太さ。全て同じ場合は<strong>linewidth</strong>、<strong>lw</strong>でも可。</p>
+<p><strong>edgecolors</strong></p>
+<p>マーカーの縁の色。デフォルトは<code class="docutils literal notranslate"><span class="pre">face</span></code>(<strong>c</strong>と同じ色)。</p>
+</div>
+<div class="section" id="id4">
+<h2><span class="section-number">1.2.3. </span>棒グラフ<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>棒グラフは <strong>Axes.bar()</strong> でプロットする。</p>
+<p>エラーバー付きの棒グラフの場合は <strong>Axes.errorbar()</strong> でプロットする。</p>
+<p>Axes.bar()の例</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>エラーバー付きの棒グラフ Axes.errorbar()</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">y_err</span><span class="p">,</span> <span class="n">capsize</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="string.html" class="btn btn-neutral float-right" title="1.3. 文字列の設定" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="setup.html" class="btn btn-neutral float-left" title="1.1. はじめに" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, shalad2
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

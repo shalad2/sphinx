@@ -1,0 +1,158 @@
+# プロットする
+
+## 折れ線グラフ
+
+折れ線グラフは **Axes.plot()** でプロットする。
+
+Axes.plot()の例
+
+```python3
+ax.plot(x, y1, label='line_1')
+ax.plot(y2, color='green', marker='o', linewidth=2, markersize='12', label='line_2')
+ax.plot(x, y3, fmt='go-', label='line_3')
+```
+
+![plot1](images/plot1.png)
+
+第一引数x(横軸の値)は省略可能。省略すると[0, 1, 2, ..., N-1]  (``x=range(len(y))``)として扱われる。
+第三引数**fmt**は、[**color**]  [**marker**]  [**linestyle**]をまとめて記述できる。
+
+**label**
+
+プロットのラベル。凡例に表示される。
+
+**color**
+
+折れ線の色。**c**でも可。
+
+| color	| description  |
+| :---- | :------------|
+| 'b'	| blue         |
+| 'g'	| green        |
+| 'r'	| red          |
+| 'c'	| cyan         |
+| 'm'	| magenta      |
+| 'y'	| yellow       |
+| 'k'	| black        |
+| 'w'	| white        |
+
+**dashes**
+
+折れ線の実線部分と空白部分の長さをリストで指定。
+
+**linestyle**
+
+折れ線の線種。**ls**でも可。**dashes**が指定されていると無効。
+
+| linestyle   | description           |
+| :---------- | :-------------------- |
+| '-'         | solid line style      |
+| '--'        | dashed line style     |
+| '-.'        | dash-dot line style   |
+| ':'         | dotted line style     |
+
+**linewidth**
+
+折れ線の太さ。**lw**でも可。
+
+**alpha**
+
+透明度を0〜1で指定。
+
+**zorder**
+
+オブジェクトが重なっていた時、この値が大きい方が前面に描画される。
+
+**marker**
+
+マーカーの形状。``None``でマーカーなし。
+
+| marker      | description           |
+| :---------- | :-------------------  |
+| '.'         | point marker          |
+| 'o'         | circle marker         |
+| 'v'         | triangle_down marker  |
+| '^'	      | triangle_up marker    |
+| '<'	      | triangle_left marker  |
+| '>'	      | triangle_right marker |
+| 's'         | square marker         |
+| '\*'         | star marker           | 
+
+**markersize**
+
+マーカーのサイズ。**ms**でも可。
+
+**markerfacecolor**
+
+マーカーの色。**mfc**でも可。
+
+**markeredgewidth**
+
+マーカーの縁の太さ。**mew**でも可。
+
+**markeredgecolor**
+
+マーカーの縁の色。**mec**でも可。
+
+
+
+## 散布図 
+
+散布図は **Axes.scatter()** でプロットする。
+
+Axes.scatter()の例
+
+```python3
+ax.scatter(x, y, marker='o')
+```
+
+マーカーに関するパラメータは、データ数と同じ要素数のリストを渡すと各点ごとに設定できる。
+
+次の引数はAxes.plot()のものと同じ。
+
+* **marker**
+* **label**
+* **alpha**
+* **zorder**
+
+**s**
+
+マーカーのサイズ。
+
+**c**
+
+マーカーの色。**facecolor**、**facecolors**でも可。
+
+**linewidths**
+
+マーカーの縁の太さ。全て同じ場合は**linewidth**、**lw**でも可。
+
+**edgecolors**
+
+マーカーの縁の色。デフォルトは``face``(**c**と同じ色)。
+
+
+
+## 棒グラフ
+
+棒グラフは **Axes.bar()** でプロットする。
+
+エラーバー付きの棒グラフの場合は **Axes.errorbar()** でプロットする。
+
+Axes.bar()の例
+
+```python3
+ax.bar(x, height)
+```
+
+
+
+
+
+
+エラーバー付きの棒グラフ Axes.errorbar()
+
+```python3
+ax.errorbar(x, y, yerr=y_err, capsize=5, )
+```
+

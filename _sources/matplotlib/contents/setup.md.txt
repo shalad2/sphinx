@@ -1,0 +1,67 @@
+# はじめに
+
+## モジュールのインポート
+
+グラフを描画するためには、はじめにmatplotlibのpyplotをインポートする。
+
+```python3
+import matplotlib.pyplot as plt
+```
+
+また、データの生成やファイルの読み込みでnumpyを使用することが多いので、併せてインポートする。
+
+```python3
+import numpy as np
+
+# データの生成
+x = np.linspace(1, 100, 100)
+y = x ** 2
+```
+
+## 描画方法
+
+Matplotlibにおけるグラフの描画方法には**Pyplotインターフェース**と**オブジェクト指向インターフェース**の2つがある。
+
+### Pyplotインターフェース
+
+全ての描画設定を`plt`を用いて行う方法。
+
+```python3
+# モジュールのインポート
+import matplotlib.pyplot as plt
+import numpy as np
+
+# データの生成
+x = np.linspace(1, 100, 100)
+y = x ** 2
+
+# プロットと描画
+plt.plot(x, y)
+plt.show()
+```
+
+### オブジェクト指向インターフェース
+
+グラフの階層構造オブジェクトを作成して描画を行う方法。以降はこちらの描画方法を採用する。
+
+```python3
+# モジュールのインポート
+import matplotlib.pyplot as plt
+import numpy as np
+
+# データの生成
+x = np.linspace(1, 100, 100)
+y = x ** 2
+
+# Figureオブジェクトの生成
+fig = plt.figure()
+# Axesオブジェクトの生成
+ax = fig.add_subplot(111)
+
+# プロットと描画
+ax.plot(x, y)
+plt.show()
+```
+
+![setup1](images/setup1.png)
+

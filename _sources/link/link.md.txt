@@ -1,0 +1,5 @@
+# リンク集
+
+## X転送
+
+* [X11 ForwardingしてMacにGUI表示する](https://qiita.com/loftkun/items/37340745f211ea5d7ece)
